@@ -1,10 +1,10 @@
-export default function Header() {
+export default function Header({ city, icon }) {
   return (
     <header>
-      {/* BUG (issue #2): avatar image is missing alt text */}
-      <img className="avatar" src="/avatar.png" />
-      {/* BUG (issue #1): "Wecome" should be "Welcome" */}
-      <h1>Wecome to DevLinks</h1>
+      {/* BUG (issue #6): weather icon image is missing alt text */}
+      <img className="icon" src={icon} />
+      {/* BUG (issue #10): "Wether" should be "Weather" */}
+      <h1>Wether in {city}</h1>
     </header>
   )
 }
